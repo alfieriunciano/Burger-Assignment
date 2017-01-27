@@ -25,7 +25,7 @@ var orm =
 	//insertOne()
 	insertOne: function(burger_name, callback)
 	{
-		connection.query('INSERT INTO bergers SET ?', 
+		connection.query('INSERT INTO burgers SET ?', 
 			{	burger_name: burger_name,
 				devoured: false,
 			}, function(err, result)
@@ -39,7 +39,7 @@ var orm =
 	//updateOne()
 	updateOne: function(burgerID, callback)
 	{
-		connection.query('UPDATE bergers SET ? WHERE ?', [{devoured: true}, {id: burgerID}],
+		connection.query('UPDATE burgers SET ? WHERE ?', [{devoured: true}, {id: burgerID}],
 			function(err, result)
 			{
 				if (err) throw err;
