@@ -1,30 +1,30 @@
-//NPM Dependencies
+
+// Node Dependencies
 var express = require('express');
-var methodOverride = require('method-override');
 var bodyParser = require('body-parser');
-var mysql = require("mysql");
+var methodOverride = require('method-override');
 
-//Create express app 
+
 var app = express();
+//Serve static content for the app from the "public" directory in the application directory.
+app.use(express.static(process.cwd() + '/public'));
+// app.use(express.static('public'));
 
-//set up serverport for Heroku
+// Parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }));
+
+// Handlebars
+var exphbs = require('express-handlebars');
+app.engine('handlebars', exphbs({defaultLayout: 'main'}));
+app.set('view engine', 'handlebars');
+
+
+var router = require('./controllers/burgers_controller.js');
+app.use('/', router);
+
+// Open Server
 var PORT = process.env.PORT || 3000;
 
-
-// Set Handlebars as template engine.
-app.engine("handlebars", exphbs({ defaultLayout: "main" }));
-app.set("view engine", "handlebars");
-
-// Set up database connection
-var connection = mysql.createConnection(
-{
-	host: "localhost",
-	user: "root",
-	password: "jeff00",
-	database: "burgers_db" 
-});
-
-// Initiate listener.
 app.listen(PORT, function() 
 {
   console.log("App listening on PORT " + PORT);
