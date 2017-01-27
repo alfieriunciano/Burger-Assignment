@@ -1,11 +1,12 @@
-<div class="row">
-  <center>
-    <!-- Left side (Burgers Availabl) -->
-    <div class="col-md-6">
-      <h4 class="submitFont">Ready to eat!</h4>
-      <div id="ready_to_eat">
 
-        <!-- Dynamically User Burgers Here -->
+  <div class="row">
+  <center>
+    <!-- Left side (Burgers Available) -->
+    <div class="col-md-4">
+      <h3 class="submitFont">Burgers Available</h3>
+      <div id="burgersAvailable">
+
+        <!-- Dynamically Add User Burgers Here -->
         {{#each burgers}}
           {{#unless devoured}}
           <form action="burger/eat/{{id}}" method="POST">
@@ -22,12 +23,14 @@
       </div>
     </div>
 
-    <!-- Right side (already eaten) -->
-    <div class="col-md-6">
-      <h4 class="submitFont">Already eaten!</h4>
-      <div id="already_eaten">
+    <div class="col-md-4"></div> 
 
-        <!-- Dynamically Insert Eaten Burgers Here -->
+    <!-- Right side (Burgers Devoured) -->
+    <div class="col-md-4">
+      <h3 class="submitFont">Burgers Devoured</h3>
+      <div id="alreadyEaten">
+
+        <!-- Dynamically Insert Devoured Burgers Here -->
         {{#each burgers}}
           {{#if this.devoured}}
             <div class="input-group">
