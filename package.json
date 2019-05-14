@@ -1,0 +1,22 @@
+{
+  "name": "handlebars",
+  "version": "1.0.0",
+  "description": "Node Express Handlebars",
+  "main": "server.js",
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sunita321/burger.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sunita321/burger/issues"
+  },
+  "homepage": "https://github.com/sunita321/burger#readme"
+}
