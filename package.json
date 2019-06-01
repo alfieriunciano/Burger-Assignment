@@ -11,12 +11,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sunita321/burger.git"
+    "url": "git+https://github.com/alfieriunciano/Burger-Assignment"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/sunita321/burger/issues"
+    "url": "https://github.com/alfieriunciano/Burger-Assignment/issues"
   },
-  "homepage": "https://github.com/sunita321/burger#readme"
+  "homepage": "https://github.com/alfieriunciano/Burger-Assignment/blob/master/README.md"
 }
